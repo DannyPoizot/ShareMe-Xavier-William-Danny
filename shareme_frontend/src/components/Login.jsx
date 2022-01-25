@@ -14,6 +14,19 @@ function Login(props) {
                     <div className='p-5'>
                         <img src={logo} width="130px" alt="Logo"/>
                     </div>
+                    <div className='shadow-2xl'>
+                        <GoogleLogin clientId='' 
+                                     render={
+                                        (renderProps) => (
+                                            <button type='button' className='bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none' onClick={renderProps.onClick}>
+                                                <FcGoogle className='mr-4' />
+                                                Sign In with Google
+                                            </button>
+                                        )
+
+                                        
+                                    }/>
+                    </div>
                 </div>
             </div>
         </div>
