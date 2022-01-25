@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "shareme_xwd"
+    "name": "shareme_xwd3"
   },
   "api": {
-    "projectId": "qpuw6q14",
+    "projectId": "ckp9h0sk",
     "dataset": "production"
   },
   "plugins": [
