@@ -22,9 +22,7 @@ function Login(props) {
                                                 <FcGoogle className='mr-4' />
                                                 Sign In with Google
                                             </button>
-                                        )
-
-                                        
+                                        )                                      
                                     }/>
                     </div>
                 </div>
