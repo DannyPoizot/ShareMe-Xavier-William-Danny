@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc'; 
 import shareVideo from '../assets/share.mp4';
 import logo from '../assets/logo.png';
+import { client } from '../client';
 
 function Login(props) {
+    const navigate = useNavigate();
     const responseGoogle = (response) => {
         // console.log(response);
         localStorage.setItem("user", JSON.stringify(response.profileObj));
@@ -16,6 +18,10 @@ function Login(props) {
             userName: name,
             image: imageUrl
         }
+        client.createIfNotExists(doc)
+            .then(() =>{
+                navigate('/', {replace: true});
+            })
     }
     return (
         <div className='flex justify-start items-center flex-col h-screen'>
