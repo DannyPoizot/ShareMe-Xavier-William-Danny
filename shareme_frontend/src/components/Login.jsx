@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc'; 
@@ -16,7 +16,7 @@ function Login(props) {
             _id: googleId,
             _type: "user",
             userName: name,
-            image: imageUrl
+            image: imageUrl,
         }
         client.createIfNotExists(doc)
             .then(() =>{
