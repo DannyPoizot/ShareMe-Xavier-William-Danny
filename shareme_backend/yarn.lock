@@ -1334,10 +1334,23 @@
     "prop-types" "^15.6.0"
     "rxjs" "^6.5.3"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b4b4009d0f137236d9ae4142f16174aed31d44f9
 "@sanity/desk-tool@^2.25.3":
   version "2.25.3"
   resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-2.25.3.tgz#1a4c7fc3ab136ac45d07d47dc30b7f48394c1f3a"
   integrity sha512-nbCfha1G969iIYElDZNk37QNIahTF9V8V+Rb/RJBlO7CSo+c6T5N0xPclZQEvVJ3/qoS4no6DOW0HMYQKAboUw==
+<<<<<<< HEAD
+=======
+"@sanity/desk-tool@^2.25.1":
+  "integrity" "sha512-nbCfha1G969iIYElDZNk37QNIahTF9V8V+Rb/RJBlO7CSo+c6T5N0xPclZQEvVJ3/qoS4no6DOW0HMYQKAboUw=="
+  "resolved" "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-2.25.3.tgz"
+  "version" "2.25.3"
+>>>>>>> 97e78c50a6f0d4de329b5db95cd776b09e0472ba
+=======
+>>>>>>> b4b4009d0f137236d9ae4142f16174aed31d44f9
   dependencies:
     "@reach/auto-id" "^0.13.2"
     "@sanity/client" "2.23.2"

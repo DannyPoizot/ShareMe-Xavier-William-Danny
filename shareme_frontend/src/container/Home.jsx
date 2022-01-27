@@ -22,8 +22,8 @@ function Home(props) {
 	useEffect(() => {
 		const query = userQuery(userInfo?.googleId);
 
-		client.fetch(query).then((arg) => {
-			setUser(arg[0]);
+		client.fetch(query).then((data) => {
+			setUser(data[0]);
 		});
 	}, []);
 
