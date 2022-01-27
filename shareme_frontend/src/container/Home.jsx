@@ -18,8 +18,9 @@ function Home(props) {
         
         client.fetch(query)
         .then((data) => {
-            setUser(data[0]);
             console.log(query)
+            setUser(data[0]);
+            
         })
     },[]);
     return (
