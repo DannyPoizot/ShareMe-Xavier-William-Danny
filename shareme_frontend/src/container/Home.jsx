@@ -20,13 +20,8 @@ function Home(props) {
 	useEffect(() => {
 		const query = userQuery(userInfo?.googleId);
 
-		console.log("Client:", client);
 		client.fetch(query).then((arg) => {
 			setUser(arg[0]);
-
-			console.log("Query:", query);
-			console.log("userInfo:", userInfo);
-			console.log("Data:", arg);
 		});
 	}, []);
 
