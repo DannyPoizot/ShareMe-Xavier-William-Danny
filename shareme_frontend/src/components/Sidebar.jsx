@@ -4,9 +4,6 @@ import {RiHomeFill} from "react-icons/ri";
 import {IoIosArrowForward} from "react-icons/io";
 import logo from "../assets/logo.png";
 
-// const Sidebar = ({user, closeToggle}) => {
-// }
-
 const isNotActiveStyle =
 	"flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize";
 const isActiveStyle =
