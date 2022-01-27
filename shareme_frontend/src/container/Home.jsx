@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import {HiMenu} from "react-icons/hi";
 import {AiFillCloseCircle} from "react-icons/ai";
 import {Link, Route, Routes} from "react-router-dom";
-import {SideBar, UserProfile} from "../components";
+import {Sidebar, UserProfile} from "../components";
 import {client} from "../client";
 import logo from "../assets/logo.png";
 import Pins from "./Pins";
@@ -34,7 +34,7 @@ function Home(props) {
 	return (
 		<div className="flex bg-gray-50 md:flex-row flex-col h-screen transaction-height duration-75 ease-out">
 			<div className="hidden md:flex h-screen flex-initial">
-				<SideBar user={user && user} closeToggle={setToggleSidebar} />
+				<Sidebar user={user && user} closeToggle={setToggleSidebar} />
 			</div>
 			<div className="flex md:hidden flex-row">
 				<div className="p-2 w-full flex flex-row justify-between items-center shadow-md">
@@ -64,7 +64,7 @@ function Home(props) {
 								onClick={() => setToggleSidebar(false)}
 							/>
 						</div>
-						<SideBar
+						<Sidebar
 							user={user && user}
 							closeToggle={setToggleSidebar}
 						/>
