@@ -9,11 +9,13 @@ import { fetchUser } from '../utils/fetchUser';
 
 const Pin = ({pin:{postedBy, image, _id, destination, save}}) => {
     const [ postHovered, setPostHovered ] = useState(false); 
+    const [ savingPost, setSavingPost ] = useState(false);
     const navigate = useNavigate(); 
     const user = fetchUser();
     const alreadySaved = !!(save?.filter((item) => item.postedBy._id === user.googleId))?.length;
     const savePin = (id) => {
         if(!alreadySaved) {
+            setSavingPost(true);
             client
             .patch(id)
             .setIfMissing({save:[]})
@@ -28,6 +30,7 @@ const Pin = ({pin:{postedBy, image, _id, destination, save}}) => {
             .commit()
             .then(() => {
                 window.location.reload();
+                setSavingPost(false);
             })
         } 
     }
@@ -61,6 +64,7 @@ const Pin = ({pin:{postedBy, image, _id, destination, save}}) => {
                                 e.stopPropagation();
                                 savePin(_id);
                             } }> Save</button>)  }
+
                         </div>
                     </div>
                 )}
