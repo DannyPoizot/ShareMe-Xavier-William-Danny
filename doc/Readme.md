@@ -87,4 +87,12 @@ Project folder structure setup & components creation
 
 #### Deployment:
 
+-   Creating production build:
+    -   "npm run build" in react project (frontend)
+-   Using netlify:
+    -   Added CORS origin in sanity
+    -   ...app url in google credentials
+-   Fixed user = null and redirect to login page
+-   <a href="https://shareme-xwd.netlify.app/">Enjoy !</a>
+
 ---
