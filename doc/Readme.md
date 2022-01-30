@@ -20,16 +20,16 @@
 Project folder structure setup & components creation
 
 -   Home
--   Adding Pin component...
--   ....routes to user profile and pins
--   Sidebar toggle and responsive design
+    -   Adding Pin component...
+    -   ....routes to user profile and pins
+    -   Sidebar toggle and responsive design
 -   Sidebar
--   Adding categories...
--   ...and navigation to categories
+    -   Adding categories...
+    -   ...and navigation to categories
 -   Navbar
--   Creation of a searchbar input
--   Adding site logo and user icons
--   Responsinve design
+    -   Creation of a searchbar input
+    -   Adding site logo and user icons
+    -   Responsive design
 
 #### Feed View:
 
@@ -72,7 +72,18 @@ Project folder structure setup & components creation
 
 #### User Profile:
 
+-   Added random banner image...
+    -   ...user name & pic...
+    -   ...logout button & function.
+-   Fetching user created/saved pins
+
 #### Search and Categories:
+
+-   Replaced initial (temporary) categories with "production" ones
+-   Populating Feed page based on categories
+-   Completing Search component:
+    -   Retrieving search term...
+    -   ...populating search page
 
 #### Deployment:
 
