@@ -16,6 +16,19 @@ import Spinner from "./Spinner";
 const randomImage =
 	"https://source.unsplash.com/1600x900/?nature,photography,technology";
 
+/*
+    // original from tutorial
+    // BUT there seems to be a bug with w-20
+const activeBtnStyles =
+	"bg-red-500 text-white font-bold p-2 rounded-full w-20 outline-none";
+const notActiveBtnStyles =
+	"bg-primary mr-4 text-black font-bold p-2 rounded-full w-20 outline-none";
+*/
+const activeBtnStyles =
+	"bg-red-500 text-white font-bold p-2 rounded-full outline-none";
+const notActiveBtnStyles =
+	"bg-primary mr-4 text-black font-bold p-2 rounded-full outline-none";
+
 function UserProfile(props) {
 	const [user, setUser] = useState(null);
 	const [pins, setPins] = useState(null);
@@ -87,6 +100,37 @@ function UserProfile(props) {
 								/>
 							)}
 						</div>
+					</div>
+					<div className="text-center mb-7">
+						<button
+							type="button"
+							onClick={(e) => {
+								setText(e.target.textContent);
+								setActiveBtn("created");
+							}}
+							className={`${
+								activeBtn === "created"
+									? activeBtnStyles
+									: notActiveBtnStyles
+							}`}
+						>
+							Created
+						</button>
+
+						<button
+							type="button"
+							onClick={(e) => {
+								setText(e.target.textContent);
+								setActiveBtn("saved");
+							}}
+							className={`${
+								activeBtn === "saved"
+									? activeBtnStyles
+									: notActiveBtnStyles
+							}`}
+						>
+							Saved
+						</button>
 					</div>
 				</div>
 			</div>
