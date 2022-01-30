@@ -50,6 +50,18 @@ function UserProfile(props) {
 		});
 	}, [userId]);
 
+	useEffect(() => {
+		// Modified a bit compared to the tutorial one
+		const query =
+			text === "Created"
+				? userCreatedPinsQuery(userId)
+				: userSavedPinsQuery(userId);
+
+		client.fetch(query).then((data) => {
+			setPins(data);
+		});
+	}, [text, userId]);
+
 	if (!user) {
 		return <Spinner message="Loading profile..." />;
 	}
@@ -132,6 +144,16 @@ function UserProfile(props) {
 							Saved
 						</button>
 					</div>
+
+					{pins?.length ? (
+						<div className="px-2">
+							<MasonryLayout pins={pins} />
+						</div>
+					) : (
+						<div className="flex justify-center font-bold items-center w-full text-xl mt-2">
+							No Pins Found!
+						</div>
+					)}
 				</div>
 			</div>
 		</div>
