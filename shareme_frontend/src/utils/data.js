@@ -12,6 +12,10 @@ export const categories = [
         image: 'https://i.pinimg.com/236x/6c/3c/52/6c3c529e8dadc7cffc4fddedd4caabe1.jpg',
     },
     {
+        name: 'Code',
+        image: 'https://i.pinimg.com/originals/29/15/5e/29155eec1ac6b59038559771604f4f69.gif',
+    },
+    {
         name: 'dogs',
         image: 'https://i.pinimg.com/236x/1b/c8/30/1bc83077e363db1a394bf6a64b071e9f.jpg',
     },
