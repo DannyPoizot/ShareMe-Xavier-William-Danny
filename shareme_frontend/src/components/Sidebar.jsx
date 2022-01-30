@@ -41,25 +41,23 @@ function Sidebar({user, closeToggle}) {
 					<h3 className="mt-2 px-5 text-base 2xl:text-xl ">
 						Discover categories
 					</h3>
-					{categories
-						.slice(0, categories.length - 1)
-						.map((category) => (
-							<NavLink
-								to={`/category/${category.name}`}
-								className={({isActive}) =>
-									isActive ? isActiveStyle : isNotActiveStyle
-								}
-								onClick={handleCloseSidebar}
-								key={category.name}
-							>
-								<img
-									src={category.image}
-									className="w-8 h-8 rounded-full shadow-sm"
-									alt="category"
-								/>
-								{category.name}
-							</NavLink>
-						))}
+					{categories.map((category) => (
+						<NavLink
+							to={`/category/${category.name}`}
+							className={({isActive}) =>
+								isActive ? isActiveStyle : isNotActiveStyle
+							}
+							onClick={handleCloseSidebar}
+							key={category.name}
+						>
+							<img
+								src={category.image}
+								className="w-8 h-8 rounded-full shadow-sm"
+								alt="category"
+							/>
+							{category.name}
+						</NavLink>
+					))}
 				</div>
 			</div>
 
