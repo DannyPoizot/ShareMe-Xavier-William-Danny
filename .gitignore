@@ -4,3 +4,6 @@
 # Ignore .env
 **.env
 **.env.**
+
+# Ignore dist
+**dist/
